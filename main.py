@@ -1,16 +1,16 @@
 import uvicorn
 from fastapi import FastAPI
 
-from predictor import FreshFlowPredictor
+from algo import FreshFlowOutput
 
-predictor = FreshFlowPredictor()
+processor = FreshFlowOutput()
 
 app = FastAPI()
 
 
 @app.get("/")
 async def root():
-    return predictor.predict()
+    return processor.get_output()
 
 
 if __name__ == "__main__":
