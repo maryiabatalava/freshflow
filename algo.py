@@ -34,8 +34,8 @@ class FreshFlowOutput:
                 sql_script = sqlite_file.read()
 
             cursor.execute(sql_script)
-            result = cursor.fetchmany() # debug
-            # result = cursor.fetchall()
+            # result = cursor.fetchmany() # debug
+            result = cursor.fetchall()
 
             cursor.close()
 
